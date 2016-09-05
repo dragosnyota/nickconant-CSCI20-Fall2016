@@ -19,13 +19,13 @@ int main()
         cin >> coinsEntered;
     cout << endl;
     cout << "You have entered " << coinsEntered << endl;
-        quartersGiven = coinsEntered / 25;                                            // converts to quarters
-        dimesGiven = ((coinsEntered - (quartersGiven * 25)) / 10);                    // converts to dimes
-        nickelsGiven = (coinsEntered - (quartersGiven * 25) - (dimesGiven * 10)) / 5; // gives number of nickels
-        penniesGiven = coinsEntered % 5;                                              // gives number of pennies
+        quartersGiven = coinsEntered / 25;                                            // converts to quarters.
+        dimesGiven = ((coinsEntered - (quartersGiven * 25)) / 10);                    // converts to dimes.
+        nickelsGiven = (coinsEntered - (quartersGiven * 25) - (dimesGiven * 10)) / 5; // gives number of nickels.
+        penniesGiven = coinsEntered % 5;                                              // gives number of pennies.
     cout << "you have " << quartersGiven << " quarters, "<< dimesGiven << " dimes, "
          << nickelsGiven << " nickels, and " << penniesGiven << " pennies." << endl;
     cout << "The total is: " << coinsEntered << ", after the fee you will receive: $";
-        dollarsReceived = (coinsEntered * 0.01) - ((coinsEntered * 0.01) * changeFee); // applies 10.9% fee
+        dollarsReceived = (coinsEntered * 0.01) - ((coinsEntered * 0.01) * changeFee); // applies 10.9% fee.
     cout << dollarsReceived << endl;
 }
