@@ -1,47 +1,31 @@
 // Nick Conant
-// 30 Aug 2016
-// Madlib lab
+// 1 Sep 2016
+// Coinstar emulator
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    string name1 = ""; //variable declarations
-    string noun1 = "";
-    string noun2 = "";
-    string noun3 = "";
-    string adj1 = "";
-    string adj2 = "";
-    string adj3 = "";
-    int numAnimals = 0;
-    float numPooped = 0;
-    char hyphon = '-';
+    int coinsEntered       = 0;
+    int quartersGiven      = 0;
+    int dimesGiven         = 0;
+    int nickelsGiven       = 0;
+    int penniesGiven       = 0;
+    double changeFee       = 0.109;
+    double dollarsReceived = 0;
     
-    cout << "Enter a person's name: " << endl; // begin user input
-        cin >> name1;
-    cout << "Enter a noun: " << endl;
-        cin >> noun1;
-    cout << "Enter another noun: " << endl;
-        cin >> noun2;
-    cout << "Enter a third noun: " << endl;
-        cin >> noun3;
-    cout << "Enter an adjective: " << endl;
-        cin >> adj1;
-    cout << "Enter another adjective: " << endl;
-        cin >> adj2;
-    cout << "Enter a third adjective: " << endl;
-        cin >> adj3;
-    cout << "Enter a number: " << endl;
-        cin >> numAnimals;
-    cout << "Enter a number with a decimal: " << endl;
-        cin >> numPooped;
-    
-    cout << "One day " << name1 << " saw a " << noun1 << " in the distance." <<endl; //begin output of madlib
-    cout << "The " << noun1 << " had " << numAnimals << " " << noun2 << " following it." << endl;
-    cout << "As " << name1 << " watched, the " << noun2 << "s began eating " << noun1 << "." << endl;
-    cout << name1 << " was amazed to see each " << noun2 << " poop out " << numPooped << " " 
-         << adj1 << " " << noun3 << "'s." << endl;
-    cout << "What a " << adj2 << hyphon << adj3 << " thing to see!" << endl;
-    
+    cout << "Please enter amount in cents: ";
+        cin >> coinsEntered;
+    cout << endl;
+    cout << "You have entered " << coinsEntered << endl;
+        quartersGiven = coinsEntered / 25;                                            // converts to quarters
+        dimesGiven = ((coinsEntered - (quartersGiven * 25)) / 10);                    // converts to dimes
+        nickelsGiven = (coinsEntered - (quartersGiven * 25) - (dimesGiven * 10)) / 5; // gives number of nickels
+        penniesGiven = coinsEntered % 5;                                              // gives number of pennies
+    cout << "you have " << quartersGiven << " quarters, "<< dimesGiven << " dimes, "
+         << nickelsGiven << " nickels, and " << penniesGiven << " pennies." << endl;
+    cout << "The total is: " << coinsEntered << ", after the fee you will receive: $";
+        dollarsReceived = (coinsEntered * 0.01) - ((coinsEntered * 0.01) * changeFee); // applies 10.9% fee
+    cout << dollarsReceived << endl;
 }
