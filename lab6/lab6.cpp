@@ -17,12 +17,12 @@ void CopyrightText() { // Copyright information function
 
 int main() {
     
-    double hourlyWage = 0;
+    double hourlyWage  = 0;
     double hoursWorked = 0;
-    double taxRate = 0.17;
-    double netPay = 0;
-    double grossPay = 0;
-    string userName = "";
+    double taxRate     = 0.17;
+    double netPay      = 0;
+    double grossPay    = 0;
+    string userName    = "";
     
     cout << "Please enter your name: ";
     getline(cin, userName);
