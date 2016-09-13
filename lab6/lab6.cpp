@@ -1,7 +1,6 @@
 // Created by: Nick Conant
-// Last revised on: 8 Sep 2016
-// Program 1 Assignment
-
+// Last Revised: 13 Sep 2016
+// Lab 6: Copyright Function
 #include <iostream>
 using namespace std;
 
@@ -9,7 +8,7 @@ void CopyrightText() { // Copyright information function
     
     cout << "(>'-')>" << endl;
     cout << "<('-'<)" << endl;
-    cout << "^('-')^" << "Copyright Nick Conant 2016" << endl;
+    cout << "^('-')^" << " Copyright Nick Conant 2016" << endl;
     cout << "<('-'<)" << endl;
     cout << "(>'-')>" << endl;
     
@@ -32,13 +31,15 @@ int main() {
     cout << "Enter your hours worked: ";
     cin >> hoursWorked;
     
-    grossPay = hourlyWage * hoursWorked;
-    netPay = grossPay - (grossPay * taxRate);
+    grossPay = hourlyWage * hoursWorked; // Calculates pay before taxes
+    netPay = grossPay - (grossPay * taxRate); // Calculates pay after taxes
     
     cout << "Name: " << userName << endl << endl;
     cout << "Hours Worked: " << hoursWorked << endl << endl;
     cout << "Pay Rate: $" << hourlyWage << endl << endl;
     cout << "Gross Pay: $" << grossPay << endl << endl;
     cout << "Net Pay: $" << netPay << endl;
+    
+    CopyrightText();
     
 }
