@@ -5,25 +5,14 @@
 #include <iostream>
 using namespace std;
 
-void CopyrightText() { // Copyright information function
-    
-    cout << "(>'-')>" << endl;
-    cout << "<('-'<)" << endl;
-    cout << "^('-')^" << "Copyright Nick Conant 2016" << endl;
-    cout << "<('-'<)" << endl;
-    cout << "(>'-')>" << endl;
-    
-    return;
-}
-
 int main() {
     
-    double hourlyWage = 0;
+    double hourlyWage  = 0;
     double hoursWorked = 0;
-    double taxRate = 0.17;
-    double netPay = 0;
-    double grossPay = 0;
-    string userName = "";
+    double taxRate     = 0.17;
+    double netPay      = 0;
+    double grossPay    = 0;
+    string userName    = "";
     
     cout << "Please enter your name: ";
     getline(cin, userName);
@@ -32,8 +21,8 @@ int main() {
     cout << "Enter your hours worked: ";
     cin >> hoursWorked;
     
-    grossPay = hourlyWage * hoursWorked;
-    netPay = grossPay - (grossPay * taxRate);
+    grossPay = hourlyWage * hoursWorked; // Calculates pay before taxes
+    netPay = grossPay - (grossPay * taxRate); // Calculates pay after taxes
     
     cout << "Name: " << userName << endl << endl;
     cout << "Hours Worked: " << hoursWorked << endl << endl;
