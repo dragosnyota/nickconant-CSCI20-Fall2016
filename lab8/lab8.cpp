@@ -1,6 +1,7 @@
 //created by: Nick Conant
 //Last modified on: 9/26/2016
 //Lab 8: Return Values
+// Converts kilograms to pounds and vice versa
 
 #include<iostream>
 using namespace std;
@@ -8,7 +9,7 @@ using namespace std;
 // constant for number of pounds per kilograms
 const double POUNDS_PER_KILO = 2.2;
 
-// converts pounds to kilograms
+// converts user input pounds to kilograms
 double PoundsToKilograms(double numPounds) {
     
     double numKilo = 0;
@@ -18,7 +19,7 @@ double PoundsToKilograms(double numPounds) {
     return numKilo;
 }
 
-// converts kilograms to pounds
+// converts user input kilograms to pounds
 double KilogramsToPounds(double numKilo) {
     
     double numPounds = 0;
