@@ -10,10 +10,7 @@ class DistanceConverter {
     
     public:
     
-    double yardsVal = 0.0;
-    double metersVal = 0.0;
-    double feetVal = 0.0;
-    double inchesVal = 0.0;
+    
     
     void SetDistFromMiles(double miles_);
     void SetDistFromYards(double yardsVal);
@@ -35,10 +32,16 @@ class DistanceConverter {
     double miles_ = 0.0;
     
 };
+    double mileVal = 0.0;
+    double yardsVal = 0.0;
+    double metersVal = 0.0;
+    double feetVal = 0.0;
+    double inchesVal = 0.0;
 
 // default constructur
 DistanceConverter::DistanceConverter() {
     miles_ = 0.0;
+   
     
     return;
 }
@@ -46,6 +49,7 @@ DistanceConverter::DistanceConverter() {
 //second constructor
 DistanceConverter::DistanceConverter(double miles_) {
     miles_ = 0.0;
+    
     
     return;
 }
