@@ -1,6 +1,6 @@
 // Created by: Nick Conant
 // Last Modified on: 29 Sep 2016
-// Program 2: Distance Converter
+// Program for converting various distance unit types 
 
 #include <iostream>
 using namespace std;
@@ -12,7 +12,7 @@ class DistanceConverter {
     
     
     
-    void SetDistFromMiles(double miles_);
+    void SetDistFromMiles(double mileVal);
     void SetDistFromYards(double yardsVal);
     void SetDistFromFeet(double feetVal);
     void SetDistFromInches(double inchesVal);
@@ -32,11 +32,11 @@ class DistanceConverter {
     double miles_ = 0.0;
     
 };
-    double mileVal = 0.0;
-    double yardsVal = 0.0;
-    double metersVal = 0.0;
-    double feetVal = 0.0;
-    double inchesVal = 0.0;
+    //double mileVal = 0.0;
+    //double yardsVal = 0.0;
+    //double metersVal = 0.0;
+    //double feetVal = 0.0;
+    //double inchesVal = 0.0;
 
 // default constructur
 DistanceConverter::DistanceConverter() {
@@ -47,8 +47,8 @@ DistanceConverter::DistanceConverter() {
 }
 
 //second constructor
-DistanceConverter::DistanceConverter(double miles_) {
-    miles_ = 0.0;
+DistanceConverter::DistanceConverter(double mileVal) {
+    miles_ = mileVal;
     
     
     return;
@@ -88,35 +88,35 @@ void DistanceConverter::SetDistFromMeters(double metersVal) {
 }
 //converts miles to meters
 double DistanceConverter::GetDistAsMeters() {
-    metersVal = miles_ / 0.00062137;
+    return (miles_ / 0.00062137);
     
-    return metersVal;
+    //return metersVal;
 }
 //converts miles to yards
 double DistanceConverter::GetDistAsYards() {
-    yardsVal = miles_ / 0.00056818;
+    return (miles_ / 0.00056818);
     
-    return yardsVal;
+    //return yardsVal;
 }
 //converts miles to feet
 double DistanceConverter::GetDistAsFeet() {
-    feetVal = miles_ / 0.00018939;
+    return (miles_ / 0.00018939);
     
-    return feetVal;
+    //return feetVal;
 }
 //converts miles to inches
 double DistanceConverter::GetDistAsInches() {
-    inchesVal = (miles_ / 0.00018939) * 12;
+    return ((miles_ / 0.00018939) * 12);
     
-    return inchesVal;
+    //return inchesVal;
 }
 //prints distance values
 void DistanceConverter::PrintDist() {
     cout << "Miles: " << miles_ << endl;
-    cout << "Meters: " << metersVal << endl;
-    cout << "Yards: " << yardsVal << endl;
-    cout << "Feet: " << feetVal << endl;
-    cout << "Inches: " << inchesVal << endl << endl;
+    cout << "Meters: " << GetDistAsMeters() << endl;
+    cout << "Yards: " << GetDistAsYards() << endl;
+    cout << "Feet: " << GetDistAsFeet() << endl;
+    cout << "Inches: " << GetDistAsInches() << endl << endl;
     
     return;
 }

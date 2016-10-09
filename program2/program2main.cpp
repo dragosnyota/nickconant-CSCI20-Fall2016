@@ -17,30 +17,24 @@ int main() {
     DistanceConverter dist8;
     
     dist1.SetDistFromMiles(1);
-    dist1.GetDistAsFeet();
     dist1.PrintDist();
     
     dist2.SetDistFromMiles(1);
-    dist2.GetDistAsInches();
     dist2.PrintDist();
     
     dist3.SetDistFromMiles(1);
-    dist3.GetDistAsMeters();
     dist3.PrintDist();
     
     dist4.SetDistFromMiles(1);
-    dist4.GetDistAsYards();
     dist4.PrintDist();
     
     dist5.SetDistFromMeters(16.0);
     dist5.PrintDist();
     
     dist6.SetDistFromYards(20.0);
-    dist6.GetDistAsFeet();
     dist6.PrintDist();
     
     dist7.SetDistFromInches(100.0);
-    dist7.GetDistAsMeters();
     dist7.PrintDist();
     
     dist8.SetDistFromMeters(1.0);
