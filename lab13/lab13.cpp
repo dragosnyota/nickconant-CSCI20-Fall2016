@@ -16,17 +16,17 @@ int main() {
     
     while (startHourValue <= endHourValue) { // while starting hour value is less than or equal to ending hour value the loop will run
         
-        minuteValue = minuteValue + 1; // adds one to minute value each time the loop is run
-        
         if (minuteValue < 10) { // if minute value is less than 10, prints hour and minute value with a 0 in front of minute value i.e. "2:08"
             
             cout << startHourValue << ":0" << minuteValue << endl;
+            minuteValue = minuteValue + 1; // adds one to minute value each time the loop is run
             
         }
         
         else if (minuteValue < 59) { // prints hour and minute value if minutes are less than 59 i.e. "1:48"
             
             cout << startHourValue << ":" << minuteValue << endl;
+            minuteValue = minuteValue + 1; // adds one to minute value each time the loop is run
             
         }
         
@@ -53,17 +53,17 @@ int main() {
     // loop is the same as the above loop
     while (startHourValue <= endHourValue) {
         
-        minuteValue = minuteValue + 1;
-        
         if (minuteValue < 10) {
             
             cout << startHourValue << ":0" << minuteValue << endl;
+            minuteValue = minuteValue + 1;
             
         }
         
         else if (minuteValue < 59) {
             
             cout << startHourValue << ":" << minuteValue << endl;
+            minuteValue = minuteValue + 1;
             
         }
         
