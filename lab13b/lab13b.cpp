@@ -51,25 +51,23 @@ int main() {
     cin >> endHourValue;
     
     // loop is the same as the above loop
-    for (startHourValue; startHourValue <= endHourValue;) {
+     for (startHourValue; startHourValue <= endHourValue;) {
         
         if (minuteValue < 10) {
             
             cout << startHourValue << ":0" << minuteValue << endl;
-            minuteValue = minuteValue + 1;
+            minuteValue = minuteValue + 15;
             
         }
         
         else if (minuteValue < 59) {
             
             cout << startHourValue << ":" << minuteValue << endl;
-            minuteValue = minuteValue + 1;
+            minuteValue = minuteValue + 15;
             
         }
         
-        else if ((minuteValue == 59) && (startHourValue <= endHourValue)){
-        
-            cout << startHourValue << ":" << minuteValue << endl;
+        else if ((minuteValue == 60) && (startHourValue <= endHourValue)) {
             
             minuteValue = 0;
             startHourValue = startHourValue + 1;
