@@ -13,7 +13,7 @@
 #include <time.h>   // for random numbers
 using namespace std;
 
-class RockPaperSciccorsGame {
+class RockPaperScissorsGame {
     
     public: 
     
@@ -27,8 +27,8 @@ class RockPaperSciccorsGame {
     void printPlayerChoice(int userChoice);
     void printFinalScore();
     
-    RockPaperSciccorsGame();                    // default constructor
-    RockPaperSciccorsGame(int compGameChoice);  // second constructor
+    RockPaperScissorsGame();                    // default constructor
+    RockPaperScissorsGame(int compGameChoice);  // second constructor
     
     private: 
     
@@ -38,7 +38,7 @@ class RockPaperSciccorsGame {
 };
 
 //default constructor
-RockPaperSciccorsGame::RockPaperSciccorsGame() {
+RockPaperScissorsGame::RockPaperScissorsGame() {
     
     compGameChoice = 1;
     
@@ -46,14 +46,14 @@ RockPaperSciccorsGame::RockPaperSciccorsGame() {
 }
 
 //second constructor
-RockPaperSciccorsGame::RockPaperSciccorsGame(int compChoice) {
+RockPaperScissorsGame::RockPaperScissorsGame(int compChoice) {
     
     compGameChoice = compChoice;
     
     return;
 }
 
-void RockPaperSciccorsGame::setComputerChoice() {
+void RockPaperScissorsGame::setComputerChoice() {
     
     srand (time(NULL));
     compGameChoice = rand() % 3 + 1;
@@ -61,7 +61,7 @@ void RockPaperSciccorsGame::setComputerChoice() {
     return;
 }
 
-int RockPaperSciccorsGame::getComputerChoice() {
+int RockPaperScissorsGame::getComputerChoice() {
      if (compGameChoice == 1) {
         cout << "rock";
     }
@@ -69,12 +69,12 @@ int RockPaperSciccorsGame::getComputerChoice() {
         cout << "paper";
     }
     else if (compGameChoice == 3) {
-        cout << "sciccors";
+        cout << "scissors";
     }
     
 }
 
-void RockPaperSciccorsGame::printPlayerChoice(int userChoice) {
+void RockPaperScissorsGame::printPlayerChoice(int userChoice) {
     if (userChoice == 1) {
         cout << "rock";
     }
@@ -82,12 +82,12 @@ void RockPaperSciccorsGame::printPlayerChoice(int userChoice) {
         cout << "paper";
     }
     else if (userChoice == 3) {
-        cout << "sciccors";
+        cout << "scissors";
     }
 }
 
 
-void RockPaperSciccorsGame::setNumberOfPlayerWins(int userChoice) {
+void RockPaperScissorsGame::setNumberOfPlayerWins(int userChoice) {
      if ((userChoice == 1) && ((compGameChoice == 1) || (compGameChoice == 2)))  {
          finalScore = finalScore;
      }
@@ -108,7 +108,7 @@ void RockPaperSciccorsGame::setNumberOfPlayerWins(int userChoice) {
      }
 }
 
-void RockPaperSciccorsGame::printFinalScore() {
+void RockPaperScissorsGame::printFinalScore() {
     
     cout << finalScore;
     return;
@@ -126,17 +126,17 @@ int main() {
     int startRound = 1;
     int numRounds;
     
-    RockPaperSciccorsGame letsPlay;
+    RockPaperScissorsGame letsPlay;
     
-    cout << "Welcome to the rock, paper, sciccors game!" << endl;
+    cout << "Welcome to the rock, paper, scissors game!" << endl;
     cout << "To start, please enter how many rounds you want to play." << endl;
     cout << "You may choose 3, 5 or 7" << endl << ":";
     cin  >> numRounds;
     
     if (numRounds == 3){
         while (startRound <= numRounds) {
-            cout << "Choose rock, paper, or sciccors." << endl;
-            cout << "(enter 1 for rock, 2 for paper, 3 for sciccors):";
+            cout << "Choose rock, paper, or scissors." << endl;
+            cout << "(enter 1 for rock, 2 for paper, 3 for scissors):";
             cin  >> userChoice;
             letsPlay.setComputerChoice();
             letsPlay.setNumberOfPlayerWins(userChoice);
@@ -156,8 +156,8 @@ int main() {
     }
     else if (numRounds == 5) {
         while (startRound <= numRounds) {
-            cout << "Choose rock, paper, or sciccors." << endl;
-            cout << "(enter 1 for rock, 2 for paper, 3 for sciccors):";
+            cout << "Choose rock, paper, or scissors." << endl;
+            cout << "(enter 1 for rock, 2 for paper, 3 for scissors):";
             cin  >> userChoice;
             letsPlay.setComputerChoice();
             letsPlay.setNumberOfPlayerWins(userChoice);
@@ -176,7 +176,7 @@ int main() {
     }
     else if (numRounds == 7) {
         while (startRound <= numRounds) {
-            cout << "Choose rock, paper, or sciccors." << endl;
+            cout << "Choose rock, paper, or scissors." << endl;
             cout << "(enter 1 for rock, 2 for paper, 3 for sciccors):";
             cin  >> userChoice;
             letsPlay.setComputerChoice();
