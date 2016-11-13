@@ -1,0 +1,7 @@
+Christian Smith ? d b a d ? b a ? ? ? f ? ? var ? equation  FINAL SCORE: 1.75
+Paxton Jones d a d d d ? a ? t f f ? ? ? expression  FINAL SCORE: 3.5
+Abby Sciuto d a d d ? ? d d d ? ? f ? ?  FINAL SCORE: 5
+Audrey Smithson c a b a ? b c c c ? ? f t f ? ? ? ? ?  FINAL SCORE: -0.75
+Katie Holmes d ? ? d ? ? ? c a d f t t ? var rand()  FINAL SCORE: 2.5
+Carrie Grant d ? b a d ? ? t f t t  FINAL SCORE: 8
+Class Average: 3.33333
