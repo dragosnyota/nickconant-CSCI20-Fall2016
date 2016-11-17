@@ -1,5 +1,5 @@
 // Created by: Nick Conant
-// Last modified on: 10 Nov 2016
+// Last modified on: 13 Nov 2016
 // Program accepts a file with student names and answers and compares them to
 // An answer key file. It then writes to a file and the screen the students grades
 // The class average and any questions that more than 50% of the class either missed
